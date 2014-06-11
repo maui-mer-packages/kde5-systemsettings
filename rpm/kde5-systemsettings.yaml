@@ -47,6 +47,7 @@ PkgConfigBR:
     - Qt5Widgets
     - Qt5Concurrent
     - Qt5Test
+    - Qt5PrintSupport
 Requires:
     - kde5-filesystem
 
