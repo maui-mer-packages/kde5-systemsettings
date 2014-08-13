@@ -64,7 +64,6 @@ Files:
     - "%{_kf5_servicesdir}/*"
     - "%{_kf5_servicetypesdir}/*"
     - "%{_kf5_sharedir}/applications/*.desktop"
-    - "%{_kf5_htmldir}/en/systemsettings"
 
 SubPackages:
     - Name: devel
@@ -76,3 +75,10 @@ SubPackages:
       Files:
           - "%{_includedir}/systemsettingsview"
           - "%{_kf5_libdir}/libsystemsettingsview.so"
+    - Name: doc
+      Group: Documentation
+      Summary: Documentation and user manuals for %{name}
+      Description: |
+        Documentation and user manuals for %{name}
+      Files:
+          - "%{_kf5_htmldir}/en/systemsettings"

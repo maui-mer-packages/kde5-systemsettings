@@ -59,6 +59,15 @@ The %{name}-devel package contains the files necessary to develop applications
 that use %{name}.
 
 
+%package doc
+Summary:    Documentation and user manuals for %{name}
+Group:      Documentation
+Requires:   %{name} = %{version}-%{release}
+
+%description doc
+Documentation and user manuals for %{name}
+
+
 %prep
 %setup -q -n %{name}-%{version}/upstream
 
@@ -94,7 +103,6 @@ rm -rf %{buildroot}
 %{_kf5_servicesdir}/*
 %{_kf5_servicetypesdir}/*
 %{_kf5_sharedir}/applications/*.desktop
-%{_kf5_htmldir}/en/systemsettings
 # >> files
 # << files
 
@@ -104,3 +112,9 @@ rm -rf %{buildroot}
 %{_kf5_libdir}/libsystemsettingsview.so
 # >> files devel
 # << files devel
+
+%files doc
+%defattr(-,root,root,-)
+%{_kf5_htmldir}/en/systemsettings
+# >> files doc
+# << files doc
