@@ -1,4 +1,4 @@
-Name         : kde5-systemsettings
+Name         : systemsettings
 Version      : 5.0.0
 Release      : 1
 Group        : System/Base
@@ -22,22 +22,21 @@ Configure    : none
 Builder      : none
 
 PkgBR:
-    - kde5-rpm-macros
+    - kf5-rpm-macros
     - extra-cmake-modules
     - qt5-tools
-    - kf5-umbrella
-    - kf5-kitemviews-devel
-    - kf5-kcmutils-devel
-    - kf5-ki18n-devel
-    - kf5-kio-devel
-    - kf5-kservice-devel
-    - kf5-kiconthemes-devel
-    - kf5-kwindowsystem-devel
-    - kf5-kxmlgui-devel
-    - kf5-kdbusaddons-devel
-    - kf5-kconfig-devel
-    - kf5-khtml-devel
-    - kf5-kdelibs4support-devel
+    - kitemviews-devel
+    - kcmutils-devel
+    - ki18n-devel
+    - kio-devel
+    - kservice-devel
+    - kiconthemes-devel
+    - kwindowsystem-devel
+    - kxmlgui-devel
+    - kdbusaddons-devel
+    - kconfig-devel
+    - khtml-devel
+    - kdelibs4support-devel
 PkgConfigBR:
     - Qt5Core
     - Qt5DBus
@@ -49,7 +48,7 @@ PkgConfigBR:
     - Qt5Test
     - Qt5PrintSupport
 Requires:
-    - kde5-filesystem
+    - kf5-filesystem
 
 RequiresPost:
     - /sbin/ldconfig
@@ -58,14 +57,14 @@ RequiresPostUn:
 
 Files:
     - "%doc COPYING COPYING.DOC"
-    - "%{_kde5_bindir}/systemsettings"
-    - "%{_kde5_libdir}/libsystemsettingsview.so.*"
-    - "%{_kde5_plugindir}/*.so"
-    - "%{_kde5_datadir}/systemsettings"
-    - "%{_datadir}/kservices5/*.desktop"
-    - "%{_datadir}/kservicetypes5/*.desktop"
-    - "%{_datadir}/applications/*.desktop"
-    - "%{_datadir}/doc/HTML/en/systemsettings"
+    - "%{_kf5_bindir}/systemsettings"
+    - "%{_kf5_libdir}/libsystemsettingsview.so.*"
+    - "%{_kf5_plugindir}/*"
+    - "%{_kf5_sharedir}/systemsettings"
+    - "%{_kf5_servicesdir}/*"
+    - "%{_kf5_servicetypesdir}/*"
+    - "%{_kf5_sharedir}/applications/*.desktop"
+    - "%{_kf5_htmldir}/en/systemsettings"
 
 SubPackages:
     - Name: devel
@@ -75,5 +74,5 @@ SubPackages:
         The %{name}-devel package contains the files necessary to develop applications
         that use %{name}.
       Files:
-          - "%{_kde5_includedir}/systemsettingsview"
-          - "%{_kde5_libdir}/libsystemsettingsview.so"
+          - "%{_includedir}/systemsettingsview"
+          - "%{_kf5_libdir}/libsystemsettingsview.so"
