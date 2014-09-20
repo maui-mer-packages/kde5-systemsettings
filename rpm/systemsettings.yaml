@@ -64,6 +64,7 @@ Files:
     - "%{_kf5_servicesdir}/*"
     - "%{_kf5_servicetypesdir}/*"
     - "%{_kf5_sharedir}/applications/*.desktop"
+    - "%{_kf5_sharedir}/kxmlgui5/*"
 
 SubPackages:
     - Name: devel

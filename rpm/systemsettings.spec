@@ -8,12 +8,6 @@ Name:       systemsettings
 # >> macros
 # << macros
 
-# >> bcond_with
-# << bcond_with
-
-# >> bcond_without
-# << bcond_without
-
 Summary:    KDE System Settings application
 Version:    5.0.0
 Release:    1
@@ -109,6 +103,7 @@ rm -rf %{buildroot}
 %{_kf5_servicesdir}/*
 %{_kf5_servicetypesdir}/*
 %{_kf5_sharedir}/applications/*.desktop
+%{_kf5_sharedir}/kxmlgui5/*
 # >> files
 # << files
 
