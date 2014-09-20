@@ -57,7 +57,7 @@ RequiresPostUn:
 
 Files:
     - "%doc COPYING COPYING.DOC"
-    - "%{_kf5_bindir}/systemsettings"
+    - "%{_kf5_bindir}/systemsettings5"
     - "%{_kf5_libdir}/libsystemsettingsview.so.*"
     - "%{_kf5_plugindir}/*"
     - "%{_kf5_sharedir}/systemsettings"
